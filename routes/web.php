@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BestellingController;
+use App\Http\Controllers\PizzaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('pizza', PizzaController::class);
+Route::resource('bestelling', BestellingController::class);
+
